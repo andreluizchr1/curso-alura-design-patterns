@@ -1,7 +1,8 @@
 
-public class ISS {
+public class ISS implements Imposto {
 
-	public double calculaISS(Orcamento orcamento) {
-		return orcamento.getValor() * 0.6;
+	@Override
+	public double calcula(Orcamento orcamento) {
+		return orcamento.getValor() * 0.06;
 	}
 }
