@@ -1,6 +1,14 @@
 
 public class IKCV extends TemplateDeImpostoCondicional {
 
+	public IKCV() {
+
+	}
+
+	public IKCV(Imposto outroImposto) {
+		super(outroImposto);
+	}
+
 	private boolean temItemMaiorQue100Reais(Orcamento orcamento) {
 		// TODO Auto-generated method stub
 		for (Item item : orcamento.getItens()) {
