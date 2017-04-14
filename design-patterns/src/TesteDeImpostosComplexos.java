@@ -3,7 +3,7 @@ public class TesteDeImpostosComplexos {
 
 	public static void main(String[] args) {
 
-		Imposto iss = new ISS(new ICMS(new ICPP()));
+		Imposto iss = new ImpostoMuitoAlto(new ICMS());
 		Orcamento orcamento = new Orcamento(500);
 
 		double valor = iss.calcula(orcamento);
