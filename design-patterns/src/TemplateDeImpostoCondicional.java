@@ -1,13 +1,13 @@
 
-public abstract class TemplateDeImpostoCondicional implements Imposto {
+public abstract class TemplateDeImpostoCondicional extends Imposto {
 
 	@Override
 	public double calcula(Orcamento orcamento) {
 		// TODO Auto-generated method stub
 		if (deveUsarMaiorTaxa(orcamento)) {
-			return maiorTaxa(orcamento);
+			return maiorTaxa(orcamento) + calculoDoOutroImposto(orcamento);
 		} else {
-			return menorTaxa(orcamento);
+			return menorTaxa(orcamento) + calculoDoOutroImposto(orcamento);
 		}
 	}
 
